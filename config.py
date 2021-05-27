@@ -30,11 +30,16 @@ class DevelopmentConfig(Config):
 class StagingConfig(Config):
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL?sslmode=require').replace('postgres://', 'postgresql://')
+    SQLALCHEMY_DATABASE_URI =  os.getenv("DATABASE_URL")  # or other relevant config var
+    if SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
+        SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace("postgres://", "postgresql://", 1)
+# rest of connection code using the connection string `uri`
 
 
 class ProductionConfig(Config):
 
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL?sslmode=require').replace('postgres://', 'postgresql://')
+    SQLALCHEMY_DATABASE_URI =  os.getenv("DATABASE_URL")  # or other relevant config var
+    if SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
+        SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace("postgres://", "postgresql://", 1)
