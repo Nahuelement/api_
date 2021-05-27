@@ -9,7 +9,7 @@ Flask-JWT-Extended==3.20.0
 marshmallow==2.19.5
 webargs==5.4.0
 itsdangerous==1.1.0
-Flask-Uploads==0.2.1
+-e git://github.com/maxcountryman/flask-uploads.git#egg=elasticutils
 Pillow==6.2.1
 Flask-Caching==1.7.2
 Flask-Limiter==1.0.1
