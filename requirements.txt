@@ -5,7 +5,7 @@ Flask-SQLAlchemy==2.4.0
 Flask-Migrate==2.5.2
 psycopg2-binary==2.8.3
 passlib==1.7.1
-Flask-JWT-Extended
+Flask-JWT-Extended==3.2.0
 marshmallow==2.19.5
 webargs==5.4.0
 itsdangerous==1.1.0
@@ -15,3 +15,4 @@ Flask-Caching==1.7.2
 Flask-Limiter==1.0.1
 gunicorn==19.9.0
 Werkzeug==1.0.0
+PyJWT==1.7.1
