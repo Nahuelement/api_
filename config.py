@@ -22,9 +22,9 @@ class Config:
 class DevelopmentConfig(Config):
     DEBUG = True
 
-    SECRET_KEY = 'super-secret-key'
+    SECRET_KEY = 'Nahuelement789'
 
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://your_name:your_password@localhost:5432/smilecook'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://Nahuel:Nahuelement789@localhost:5432/smilecook'
 
 
 class StagingConfig(Config):
